@@ -1,0 +1,13 @@
+var a, aM, aH;
+var b, bM, bH;
+aM = prompt("enter a's Mass");
+aH = prompt("enter a's height");;
+bM = prompt("enter b's Mass");;
+bH = prompt("enter b's height");;
+a = aM / (aH * aH);
+b = bM / (bH * bH);
+console.log("a ", a);
+console.log("b ", b);
+var c;
+c = a > b;
+console.log('is a\'s bmi higher than b\'s' + c);
