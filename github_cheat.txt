@@ -18,5 +18,5 @@
 
 	popup sreen will be prompt for git login sreen
 
-6.) git status ---> u will get update of the file
+6.) git status ---> u will get update of the files
 
