@@ -1,0 +1,22 @@
+1.) git init
+
+2.) git add -A
+
+3.) git commit -m "commment\'s"
+
+4.) git remote add origin https://github.com/AKHILNALLA/JavaScript.git
+	
+	to the link of the above first we need to create a repository
+	there u will get an link 
+
+5.) git push -u origin master
+	
+	git config --global user.name "user.name"
+	git config --global user.email "email"
+
+	or
+
+	popup sreen will be prompt for git login sreen
+
+6.) git status ---> u will get update of the file
+
