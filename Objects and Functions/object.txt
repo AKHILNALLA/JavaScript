@@ -1,0 +1,107 @@
+https://github.com/AKHILNALLA/JavaScript
+
+Every thing is an object 
+
+primitives --> Number, string Booleans , Undenfined, Null
+
+Everything Else --> Arrays, Function, objects , Dates, Wrappers ..etc  is an object
+
+Objects interacting with one another thru methods And properties.
+
+Used to store data, structureapplication into modules and Keeping code clean
+
+Ex:
+	var jane ={
+	
+	name: 'jane',
+	dob:'1997',
+	status:'single'		
+
+	};
+
+Every JS object has a prototype property, which makes inheritance possible in JS.
+
+The prototype property of an object is where we put methods and properties that we want 
+	other object to inheritance.
+
+the constructor's protype property is not the prototype of the constructor itself it's the 
+	prototype of all instances that are created thru it.
+
+prototype chain can be debbuged using dev tool kit console
+
+JavaScript Object Properties::::
+	
+	The syntax for accessing the property of an object is:
+
+	objectName.property         // person.age
+	objectName["property"]      // person["age"]
+	objectName[expression]      // x = "age"; person[x]
+
+
+
+
+to add properities to an object ---> objectName.propertyName = "value";
+
+to delete property from an Object ----> delete objectName.propertyName;
+
+
+JavaScript Object Methods::::
+
+
+var person = {
+  firstName: "John",
+  lastName : "Doe",
+  id       : 5566,
+  fullName : function() {
+    return this.firstName + " " + this.lastName;
+  }
+};
+
+Accessing Object Methods
+
+objectName.methodName()
+
+	Using Built-In Methods
+	
+	var message = "Hello world!";
+	var x = message.toUpperCase();
+
+Displaying Object Properties:::
+
+  Displaying the Object Properties by name::
+
+	person.name + "," + person.age + "," + person.city;
+
+  Displaying the Object Properties in a Loop::
+
+	var person = {name:"John", age:30, city:"New York"};
+
+	for (x in person) {
+		txt += person[x] + " ";
+	};
+	
+	You must use person[x] in the loop.
+
+	person.x will not work (Because x is a variable).
+
+
+  Displaying the Object using Object.values()::
+
+	var person = {name:"John", age:30, city:"New York"};
+
+``	var myArray = Object.values(person);
+
+  Displaying the Object using JSON.stringify()::
+
+	Any JavaScript object can be stringified (converted to a string) with the JavaScript function JSON.stringify():
+	var person = {name:"John", age:30, city:"New York"};
+
+	var myString = JSON.stringify(person);
+
+
+
+
+
+
+
+
