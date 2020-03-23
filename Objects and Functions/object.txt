@@ -30,6 +30,7 @@ the constructor's protype property is not the prototype of the constructor itsel
 prototype chain can be debbuged using dev tool kit console
 
 JavaScript Object Properties::::
+----------------------------------------------------------------------------------------------------------------
 	
 	The syntax for accessing the property of an object is:
 
@@ -46,7 +47,7 @@ to delete property from an Object ----> delete objectName.propertyName;
 
 
 JavaScript Object Methods::::
-
+----------------------------------------------------------------------------------------------------------------
 
 var person = {
   firstName: "John",
@@ -57,7 +58,8 @@ var person = {
   }
 };
 
-Accessing Object Methods
+Accessing Object Methods::
+----------------------------------------------------------------------------------------------------------------
 
 objectName.methodName()
 
@@ -67,6 +69,7 @@ objectName.methodName()
 	var x = message.toUpperCase();
 
 Displaying Object Properties:::
+----------------------------------------------------------------------------------------------------------------
 
   Displaying the Object Properties by name::
 
@@ -97,6 +100,121 @@ Displaying Object Properties:::
 	var person = {name:"John", age:30, city:"New York"};
 
 	var myString = JSON.stringify(person);
+
+
+JavaScript Object Accessors:::
+----------------------------------------------------------------------------------------------------------------
+
+	JavaScript Accessors (Getters and Setters)
+
+JavaScript Getter (The get Keyword)
+
+// Create an object:
+var person = {
+  firstName: "John",
+  lastName : "Doe",
+  language : "en",
+  get lang() {
+    return this.language;
+  }
+};
+
+// Display data from the object using a getter:
+document.getElementById("demo").innerHTML = person.lang;
+
+JavaScript Setter (The set Keyword)
+
+var person = {
+  firstName: "John",
+  lastName : "Doe",
+  language : "",
+  set lang(lang) {
+    this.language = lang;
+  }
+};
+
+// Set an object property using a setter:
+person.lang = "en";
+
+// Display data from the object:
+document.getElementById("demo").innerHTML = person.language;
+
+JavaScript Object Constructors::
+------------------------------------------------
+
+function Person(firstName, lastName, age, eyeColor) {
+  this.firstName = firstName; 
+  this.lastName = lastName;
+  this.age = age;
+  this.eyeColor = eyeColor;
+  this.changeName = function (name) {
+    this.lastName = name;
+  };
+}
+
+JavaScript Object Prototypes:::
+---------------------------------------------------------
+We also learned that you can not add a new property to an existing object constructor:
+
+The JavaScript prototype property allows you to add new properties to object constructors:
+
+
+function Person(first, last, age, eyecolor) {
+  this.firstName = first;
+  this.lastName = last;
+  this.age = age;
+  this.eyeColor = eyecolor;
+}
+
+Person.prototype.nationality = "English";
+
+The JavaScript prototype property also allows you to add new methods to objects constructors:
+
+function Person(first, last, age, eyecolor) {
+  this.firstName = first;
+  this.lastName = last;
+  this.age = age;
+  this.eyeColor = eyecolor;
+}
+
+Person.prototype.name = function() {
+  return this.firstName + " " + this.lastName;
+};
+Only modify your own prototypes. Never modify the prototypes of standard JavaScript objects.
+
+JavaScript ES5 Object Methods:::
+-------------------------------------------------------
+
+ECMAScript 5 added a lot of new Object Methods to JavaScript.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
