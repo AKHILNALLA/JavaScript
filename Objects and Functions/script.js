@@ -43,93 +43,125 @@
 // Lecture: Primitives vs objects
 
 // Primitives
-var a = 23;
-var b = a;
-a = 46;
-console.log(a);
-console.log(b);
-// Objects
-var obj1 = {
-    name: 'John',
-    age: 26
-};
-var obj2 = obj1;
-obj1.age = 30;
-console.log(obj1.age);
-console.log(obj2.age);
-// Functions
-var age = 27;
-var obj = {
-    name: 'Jonas',
-    city: 'Lisbon'
-};
-function change(a, b) {
-    a = 30;
-    b.city = 'San Francisco';
-}
-change(age, obj);
-console.log(age);
-console.log(obj.city);
+// var a = 23;
+// var b = a;
+// a = 46;
+// console.log(a);
+// console.log(b);
+// // Objects
+// var obj1 = {
+//     name: 'John',
+//     age: 26
+// };
+// var obj2 = obj1;
+// obj1.age = 30;
+// console.log(obj1.age);
+// console.log(obj2.age);
+// // Functions
+// var age = 27;
+// var obj = {
+//     name: 'Jonas',
+//     city: 'Lisbon'
+// };
+// function change(a, b) {
+//     a = 30;
+//     b.city = 'San Francisco';
+// }
+// change(age, obj);
+// console.log(age);
+// console.log(obj.city);
 
-// passing function as argument's::
+// // passing function as argument's::
 
-console.log("passing function as argument's::")
+// console.log("passing function as argument's::")
 
-var years = [1990, 1965, 1937, 2005, 1998];
-
-
+// var years = [1990, 1965, 1937, 2005, 1998];
 
 
-function arrayCalc(arr, func){
-    var arrayResult = [];
 
-    for(var i = 0; i < arr.length; i++){
-        arrayResult.push(func(arr[i]));
-    }
 
-    console.log("arrayCalc",arrayResult);
-    return arrayResult;
-}
+// function arrayCalc(arr, func){
+//     var arrayResult = [];
 
-var ages = arrayCalc(years, calculateAge); 
+//     for(var i = 0; i < arr.length; i++){
+//         arrayResult.push(func(arr[i]));
+//     }
 
-function calculateAge(res){
-    console.log("calculateAge",2020 - res);
-    return 2020 - res;
+//     console.log("arrayCalc",arrayResult);
+//     return arrayResult;
+// }
+
+// var ages = arrayCalc(years, calculateAge); 
+
+// function calculateAge(res){
+//     console.log("calculateAge",2020 - res);
+//     return 2020 - res;
     
-}
+// }
 
-var fullAges = arrayCalc(ages , isFullAge );
+// var fullAges = arrayCalc(ages , isFullAge );
 
-function isFullAge(res){
-    console.log("isFullAge",res >= 18);
-    return res >= 18;
+// function isFullAge(res){
+//     console.log("isFullAge",res >= 18);
+//     return res >= 18;
     
-}
+// }
 
-console.log("fullAge", fullAges);
+// console.log("fullAge", fullAges);
 
-var rates = arrayCalc(ages , maxHeartRate);
+// var rates = arrayCalc(ages , maxHeartRate);
 
-function maxHeartRate(res){
-    if(res >= 18 && res <= 81){
-        console.log("maxHeartRate",Math.round(206.9 - (0.67 * res)));
-        return Math.round(206.9 - (0.67 * res));
+// function maxHeartRate(res){
+//     if(res >= 18 && res <= 81){
+//         console.log("maxHeartRate",Math.round(206.9 - (0.67 * res)));
+//         return Math.round(206.9 - (0.67 * res));
+//     } else {
+
+//         return -1;
+//     }
+
+// }
+
+// console.log("rates",rates);
+
+/////////////////////////////
+// Lecture: Functions returning functions
+console.log("Functions returning functions");
+
+function interviewQuestion(job) {
+    console.log("job",job);
+    if (job === 'designer') {
+        return function(name) {
+            console.log(name + ', can you please explain what UX design is?');
+        }
+    } else if (job === 'teacher') {
+        console.log(job)
+        console.log(name)
+
+        return function(name) {
+            console.log(name)
+
+            console.log('What subject do you teach, ' + name + '?');
+        }
     } else {
-
-        return -1;
+        return function(name) {
+            console.log('Hello ' + name + ', what do you do?');
+        }
     }
-
 }
 
-console.log("rates",rates);
+var teacherQuestion = interviewQuestion('teacher');
+
+var designerQuestion = interviewQuestion('designer');
+
+console.log(teacherQuestion)
 
 
+designerQuestion('Mark');
+designerQuestion('Mike');
 
 
-
-
-
+console.log(designerQuestion)
 
 
 
