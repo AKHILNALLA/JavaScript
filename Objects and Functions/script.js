@@ -126,42 +126,51 @@
 
 /////////////////////////////
 // Lecture: Functions returning functions
-console.log("Functions returning functions");
+// console.log("Functions returning functions");
 
-function interviewQuestion(job) {
-    console.log("job",job);
-    if (job === 'designer') {
-        return function(name) {
-            console.log(name + ', can you please explain what UX design is?');
-        }
-    } else if (job === 'teacher') {
-        console.log(job)
-        console.log(name)
+// function interviewQuestion(job) {
+//     console.log("job",job);
+//     if (job === 'designer') {
+//         return function(name) {
+//             console.log(name + ', can you please explain what UX design is?');
+//         }
+//     } else if (job === 'teacher') {
+//         console.log(job)
+//         console.log(name)
 
-        return function(name) {
-            console.log(name)
+//         return function(name) {
+//             console.log(name)
 
-            console.log('What subject do you teach, ' + name + '?');
-        }
-    } else {
-        return function(name) {
-            console.log('Hello ' + name + ', what do you do?');
-        }
-    }
-}
+//             console.log('What subject do you teach, ' + name + '?');
+//         }
+//     } else {
+//         return function(name) {
+//             console.log('Hello ' + name + ', what do you do?');
+//         }
+//     }
+// }
 
-var teacherQuestion = interviewQuestion('teacher');
+// var teacherQuestion = interviewQuestion('teacher');
 
-var designerQuestion = interviewQuestion('designer');
+// var designerQuestion = interviewQuestion('designer');
 
-console.log(teacherQuestion)
+// console.log(teacherQuestion)
+
+// teacherQuestion('John');
+
+// designerQuestion('Mark');
+// designerQuestion('Mike');
+
+// console.log(teacherQuestion)
+
+// console.log(designerQuestion);
+// interviewQuestion('teacher')('Mark');
+
+// designerQuestion('Mark');
+// designerQuestion('Mike');
 
 
-designerQuestion('Mark');
-designerQuestion('Mike');
-
-
-console.log(designerQuestion)
+// console.log(designerQuestion)
 
 
 
